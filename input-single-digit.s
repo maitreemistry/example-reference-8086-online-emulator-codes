@@ -1,0 +1,5 @@
+start:
+mov ah, 0x001
+int 0x0021
+sub al, 0x0030
+hlt
