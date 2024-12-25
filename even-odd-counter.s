@@ -1,0 +1,59 @@
+vals:
+db 0x01
+db 0x02
+db 0x03
+db 0x05
+db 0x09
+db 0x07
+db 0x10
+db 0x04
+db 0x09
+db 0x0c
+db 0x0a
+db 0x06
+db 0x0e
+db 0x0f
+db 0x13
+db 0x17
+db 0x1f
+db 0x02
+db 0x00
+last: db 0x07
+
+start:
+mov si, offset vals
+mov dl,0x02
+mov cl, 0x14
+mov bh, 0x00 ;even counter
+mov bl, 0x00 ; odd counter
+
+back:
+mov al,byte[si]
+div dl
+inc ah
+dec ah
+jnz odd
+inc ah
+dec ah
+jz even
+
+odd:
+add bl, 0x01
+inc si
+dec cl
+jnz back
+inc cl
+dec cl
+jz done
+
+even:
+add bh, 0x01
+inc si
+dec cl
+jnz back
+inc cl
+dec cl
+jz done
+
+done:
+hlt
