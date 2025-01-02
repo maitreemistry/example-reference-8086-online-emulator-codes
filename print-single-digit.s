@@ -1,0 +1,6 @@
+start:
+MOV AH,0X02
+MOV DL, 0X05
+ADD DL, 0X0030
+INT 0X0021
+hlt
