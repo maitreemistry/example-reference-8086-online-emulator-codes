@@ -11,8 +11,6 @@ For running and testing the assembly programs, I used the following online **808
 ## 📂 Repository Contents
 This repository includes:
 - 📜 8086 Assembly codes
-- 📘 Reference materials
-- 📝 Lab assignments
 - 🛠️ Sample programs for better understanding
 
 ## 🤝 Contribution
